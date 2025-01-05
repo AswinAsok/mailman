@@ -138,7 +138,7 @@ const FileUpload = () => {
               const data = new FormData();
               console.log("Test");
               console.log(csvData);
-              data.append("fromMail", fromMail);
+              data.append("fromMail", fromMail)
               data.append("password", password);
               data.append("to", obj.email);
               data.append("subject", subject);
@@ -153,7 +153,7 @@ const FileUpload = () => {
               const config = {
                 method: "post",
                 maxBodyLength: Infinity,
-                url: "https://api.buildnship.in/mailman/v1/send-mail/",
+                url: "http://127.0.0.1:8000/mailman/v1/send-mail/",
                 headers: { "Content-Type": "multipart/form-data" },
                 data: data,
               };
